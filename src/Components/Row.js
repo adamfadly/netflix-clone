@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import axios from "../Services/axios";
+import { TMDB } from "../Services/axios";
 
-function Row({ title, fetchURL }) {
+function Row({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     async function getMovies() {
-      const request = await axios.get(fetchURL);
-      console.log(request);
-      return request;
+      const result = await TMDB.get(fetchUrl);
+      console.log(result);
+      return result;
     }
     getMovies();
-  }, []);
+  }, [fetchUrl]);
 
   return (
     <div id="">
