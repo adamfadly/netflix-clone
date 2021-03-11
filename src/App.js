@@ -1,12 +1,13 @@
-import React from "react";
 import "./App.css";
-import Row from "./Components/Row";
+import React from "react";
 import requests from "./Services/requests";
-// import Banner from "./Components/Banner";
+import Banner from "./Components/Banner";
+import Row from "./Components/Row";
 
 function App() {
   return (
     <div className="App">
+      <Banner />
       <Row
         title="Trending"
         fetchUrl={requests.fetchTrending}
