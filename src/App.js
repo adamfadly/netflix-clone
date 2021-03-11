@@ -1,12 +1,14 @@
 import "./App.css";
 import React from "react";
 import requests from "./Services/requests";
+import Nav from "./Components/Nav";
 import Banner from "./Components/Banner";
 import Row from "./Components/Row";
 
 function App() {
   return (
     <div className="App">
+      <Nav />
       <Banner />
       <Row
         title="Trending"
